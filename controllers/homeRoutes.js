@@ -6,9 +6,21 @@ router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll();
         if (!postData) {
-            res.status(404).json('404 Not Found');
+            res.status(404).json({ message: 'no posts found'});
         }
         res.render('post', postData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/post/:id', withAuth, async (req, res) => {
+    try {
+        postData = await Post.findByPk(req.params.id)
+        if (!postData) {
+            res.status(404).json({ message: "post not found"});
+        }
+        res.render(postData);
     } catch (err) {
         res.status(500).json(err);
     }

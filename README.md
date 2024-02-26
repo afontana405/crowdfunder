@@ -2,7 +2,7 @@
 
 ## Description
 
-In order to easily create and access crowd funds, this backend application was made to fulfill those requests as well as provide the framework for turning this into a front-end application as well.
+In order to easily create posts and comments on a tech blog, as well as see other users posts, this backend application was made to fulfill those requests as well as provide the framework for turning this into a front-end application as well.
 
 ## User Story
 
